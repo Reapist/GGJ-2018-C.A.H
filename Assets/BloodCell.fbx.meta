@@ -1,81 +1,15 @@
 fileFormatVersion: 2
-guid: 0c1734d40528c0c419dd39f8cbeb6450
-timeCreated: 1517036469
+guid: 87bc3052bf4b27048b0ff70fafd9be7d
+timeCreated: 1517043700
 licenseType: Pro
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Armature
-    100004: L_B_Flagella1.001
-    100006: L_B_Flagella2.001
-    100008: L_B_Flagella3.001
-    100010: L_B_Flagella4.001
-    100012: L_B_Flagella5.001
-    100014: L_B_Flagella6.001
-    100016: L_B_Flagella6.001_end
-    100018: L_T_Flagella1.001
-    100020: L_T_Flagella2.001
-    100022: L_T_Flagella3.001
-    100024: L_T_Flagella4.001
-    100026: L_T_Flagella5.001
-    100028: L_T_Flagella6.001
-    100030: L_T_Flagella6.001_end
-    100032: R_B_Flagella1
-    100034: R_B_Flagella2
-    100036: R_B_Flagella3
-    100038: R_B_Flagella4
-    100040: R_B_Flagella5
-    100042: R_B_Flagella6
-    100044: R_B_Flagella6_end
-    100046: R_T_Flagella1
-    100048: R_T_Flagella2
-    100050: R_T_Flagella3
-    100052: R_T_Flagella4
-    100054: R_T_Flagella5
-    100056: R_T_Flagella6
-    100058: R_T_Flagella6_end
-    100060: Root
-    100062: Root_end
-    100064: Torus.002
     400000: //RootNode
-    400002: Armature
-    400004: L_B_Flagella1.001
-    400006: L_B_Flagella2.001
-    400008: L_B_Flagella3.001
-    400010: L_B_Flagella4.001
-    400012: L_B_Flagella5.001
-    400014: L_B_Flagella6.001
-    400016: L_B_Flagella6.001_end
-    400018: L_T_Flagella1.001
-    400020: L_T_Flagella2.001
-    400022: L_T_Flagella3.001
-    400024: L_T_Flagella4.001
-    400026: L_T_Flagella5.001
-    400028: L_T_Flagella6.001
-    400030: L_T_Flagella6.001_end
-    400032: R_B_Flagella1
-    400034: R_B_Flagella2
-    400036: R_B_Flagella3
-    400038: R_B_Flagella4
-    400040: R_B_Flagella5
-    400042: R_B_Flagella6
-    400044: R_B_Flagella6_end
-    400046: R_T_Flagella1
-    400048: R_T_Flagella2
-    400050: R_T_Flagella3
-    400052: R_T_Flagella4
-    400054: R_T_Flagella5
-    400056: R_T_Flagella6
-    400058: R_T_Flagella6_end
-    400060: Root
-    400062: Root_end
-    400064: Torus.002
     2300000: //RootNode
-    2300002: Torus.002
     3300000: //RootNode
-    3300002: Torus.002
-    4300000: Torus.002
+    4300000: Sphere
   materials:
     importMaterials: 1
     materialName: 0

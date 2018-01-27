@@ -19,12 +19,14 @@ public class MouseControle : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+       
         force = new Vector3(0, 0, 0);
         this.rigidbody = GetComponent<Rigidbody>();
         //  pos = GameObject.Find("Text");
         width = 4;
         heigth = 2;
         maxSpeed = new Vector3(100, 0, 100);
+        this.rigidbody.freezeRotation = true;
         //Instantiate(arrow, new Vector3(1.0f, 2.0f, 0.0f), Quaternion.identity);
 
      }
