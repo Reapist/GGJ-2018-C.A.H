@@ -10,23 +10,24 @@ public class MouseControle : MonoBehaviour
     Vector3 force;
     Rigidbody rigidbody;
     Vector3 keepPos;
-    GameObject pos;
+    Vector3 maxSpeed;
+   // GameObject pos;
     float width;
     float heigth;
-    GameObject arrow;
+    //GameObject arrow;
 
     // Use this for initialization
     void Start()
     {
         force = new Vector3(0, 0, 0);
         this.rigidbody = GetComponent<Rigidbody>();
-        pos = GameObject.Find("Text");
+        //  pos = GameObject.Find("Text");
         width = 4;
         heigth = 2;
-        Instantiate(arrow, new Vector3(1.0f, 2.0f, 0.0f), Quaternion.identity);
+        maxSpeed = new Vector3(100, 0, 100);
+        //Instantiate(arrow, new Vector3(1.0f, 2.0f, 0.0f), Quaternion.identity);
 
-    }
-
+     }
     // Update is called once per frame
     void Update()
     {
@@ -40,10 +41,12 @@ public class MouseControle : MonoBehaviour
         else if (Input.GetMouseButtonUp(0))
         {
             endPos = Input.mousePosition;
-            //force = endPos - startPos;
             force.x = endPos.x - startPos.x;
             force.z = endPos.y - startPos.y;
-
+            if (force.x > maxSpeed.x)
+                force.x = maxSpeed.x;
+            if (force.z > maxSpeed.z)
+                force.z = maxSpeed.z;
 
             this.rigidbody.AddForce(-force);
         }
@@ -92,8 +95,8 @@ public class MouseControle : MonoBehaviour
             this.rigidbody.velocity = a;
         }
 
-        this.pos.GetComponent<Text>().text = force.ToString("F2");
-        ;
+       // this.pos.GetComponent<Text>().text = force.ToString("F2");
+        
 
     }
 }

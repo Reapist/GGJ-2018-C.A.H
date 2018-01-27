@@ -7,15 +7,15 @@ public class arrow : MonoBehaviour
 
     Vector2 startPos;
     Vector3 force;
-
+    GameObject sphere;
 
 
     // Use this for initialization
     void Start()
     {
-
+        sphere = GameObject.Find("Sphere");
         // スケールを0にすることで画面から消す
-        transform.localScale = new Vector3(1, 1, 1);
+        transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         transform.localPosition = new Vector3(-50, 50, 50);
     }
 
@@ -35,12 +35,23 @@ public class arrow : MonoBehaviour
             // 力ベクトルを算出
             force.x = endPos.x - startPos.x;
             force.z = endPos.y - startPos.y;
+            force.Normalize();
 
             // 矢印の角度を変える
-            transform.localPosition = new Vector3(-force.x/400, 0, -force.z/400);
-            // float angle = Mathf.Atan2(force.x, force.y) * Mathf.Rad2Deg;
+            Vector3 spPos = sphere.transform.position;
+
+            int arrowLength = 2;
+            float arrDis = arrowLength * transform.localScale.x;
+            float sphereDis = sphere.transform.localScale.x;
+
+            this.transform.localPosition =
+                spPos - (sphereDis + arrDis) * 0.5f * force;
+
+
+
+             float angle = Mathf.Atan2(force.x, force.z) * Mathf.Rad2Deg;
             // transform.eulerAngles = new Vector3(angle, angle, angle);
-            //transform.rotation = Quaternion.Euler(0.0f, 0.0f, angle);
+            transform.rotation = Quaternion.Euler(0.0f, 90+angle, 90);
 
             //transform.localPosition.normalized
 
