@@ -17,8 +17,17 @@ public class Recolor : MonoBehaviour {
 
 	void OnCollisionEnter(Collision collision)
 	{
-		GO = GameObject.Find("ColorSphere");
-		GO.GetComponent<Renderer>().material.color = Color.green;
+		//collision.gameObject.GetComponent<Renderer>().material.color = Color.green;
+		if (collision.gameObject.tag == "PlayerA")
+		{
+			gameObject.tag = "ControlledA";
+			gameObject.GetComponent<Renderer>().material.color = Color.red;
+		}
+		else if (collision.gameObject.tag == "PlayerB") 
+		{
+			gameObject.tag = "ControlledB";
+			gameObject.GetComponent<Renderer>().material.color = Color.blue;
+		}
 		//if (collision.gameObject.tag == "bullet")
 		//{
 		//	audioplayer.PlayOneShot(hitsound, Random.Range(0.5f, 1.0f));
