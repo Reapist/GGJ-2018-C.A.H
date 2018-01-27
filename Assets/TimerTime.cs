@@ -26,7 +26,7 @@ public class TimerTime : MonoBehaviour
         uncontrolledObject = 0.0f;
         maxObject = 0.0f;
         oldSeconds = 60;
-        startTime = 10;
+        startTime = 3;
     }
     void Update()
     {
