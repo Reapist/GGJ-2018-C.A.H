@@ -13,6 +13,7 @@ public class MouseControle : MonoBehaviour
     GameObject pos;
     float width;
     float heigth;
+    GameObject arrow;
 
     // Use this for initialization
     void Start()
@@ -22,7 +23,7 @@ public class MouseControle : MonoBehaviour
         pos = GameObject.Find("Text");
         width = 4;
         heigth = 2;
-
+        Instantiate(arrow, new Vector3(1.0f, 2.0f, 0.0f), Quaternion.identity);
 
     }
 
