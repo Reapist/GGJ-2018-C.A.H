@@ -13,7 +13,7 @@ public class arrow : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        sphere = GameObject.Find("Sphere");
+        sphere = GameObject.Find("PlayerCell");
         // スケールを0にすることで画面から消す
         transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         transform.localPosition = new Vector3(-50, 50, 50);

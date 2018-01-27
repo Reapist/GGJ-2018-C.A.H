@@ -15,7 +15,7 @@ public class TitleDirector : MonoBehaviour {
 	void Update () {
         if (Input.GetMouseButtonDown(0))
         {
-            SceneManager.LoadScene("test03");
+            SceneManager.LoadScene("MainScene");
 
         }
 

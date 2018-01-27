@@ -23,9 +23,9 @@ public class MouseControle : MonoBehaviour
         force = new Vector3(0, 0, 0);
         this.rigidbody = GetComponent<Rigidbody>();
         //  pos = GameObject.Find("Text");
-        width = 4;
-        heigth = 2;
-        maxSpeed = new Vector3(100, 0, 100);
+        width = 4.5f;
+        heigth = 2.5f;
+        maxSpeed = new Vector3(300, 300, 300);
         this.rigidbody.freezeRotation = true;
         //Instantiate(arrow, new Vector3(1.0f, 2.0f, 0.0f), Quaternion.identity);
 
@@ -43,8 +43,9 @@ public class MouseControle : MonoBehaviour
         else if (Input.GetMouseButtonUp(0))
         {
             endPos = Input.mousePosition;
-            force.x = endPos.x - startPos.x;
-            force.z = endPos.y - startPos.y;
+            int speedFactor = 2;
+            force.x = speedFactor * (endPos.x - startPos.x);
+            force.z = speedFactor * (endPos.y - startPos.y);
             if (force.x > maxSpeed.x)
                 force.x = maxSpeed.x;
             if (force.z > maxSpeed.z)

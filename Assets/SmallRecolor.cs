@@ -17,7 +17,7 @@ public class SmallRecolor : MonoBehaviour {
 	void OnTriggerEnter(Collider other)
 	{
 		var collider = other.gameObject;
-		if (gameObject.tag == "PlayerA" && (collider.tag == "ControlledB" || collider.tag == "Neutral"))
+		if (gameObject.tag == "PlayerA")
 		{
 			collider.tag = "ControlledA";
 			collider.GetComponent<Renderer>().material.color = Color.red;
