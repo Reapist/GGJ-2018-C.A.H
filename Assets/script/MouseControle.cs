@@ -60,7 +60,7 @@ public class MouseControle : MonoBehaviour
 
             this.rb.AddForce(-force);
 
-            GetComponent<AudioSource>().Play();
+			GetComponents<AudioSource>()[Random.Range(0, GetComponents<AudioSource>().Length)].Play();
         }
 
         if (width < this.rb.position.x)
