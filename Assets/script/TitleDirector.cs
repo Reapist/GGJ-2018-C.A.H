@@ -6,9 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class TitleDirector : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
+    // Use this for initialization
+    void Start () {
 	}
 	
 	// Update is called once per frame
@@ -19,6 +18,7 @@ public class TitleDirector : MonoBehaviour {
 
         }
 
+        //this.speed *= 0.98f;
 
     }
 }
