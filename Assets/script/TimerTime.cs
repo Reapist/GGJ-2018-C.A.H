@@ -16,6 +16,8 @@ public class TimerTime : MonoBehaviour
     //　最初の時間
     private float startTime;
     private bool hasChanged = false;
+    private bool firtsUpdate;
+    private float timeAtSceneBeginning;
 
     void Start()
     {
@@ -28,14 +30,21 @@ public class TimerTime : MonoBehaviour
         uncontrolledObject = 0.0f;
         maxObject = 0.0f;
         oldSeconds = 60;
+        firtsUpdate = true;
         startTime = 10;
     }
     void Update()
     {
-        if(seconds >= 0)
+        if(firtsUpdate)
+        {
+            timeAtSceneBeginning = Time.time;
+            firtsUpdate = false;
+        }
+
+        if (seconds >= 0)
         {
             //　Time.timeでの時間計測
-            seconds = startTime - Time.time;
+            seconds = startTime - (Time.time - timeAtSceneBeginning);
             minute = (int)seconds / 60;
             if ((int)seconds != (int)oldSeconds)
             {
