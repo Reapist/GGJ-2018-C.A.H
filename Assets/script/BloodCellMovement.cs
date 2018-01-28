@@ -30,7 +30,7 @@ public class BloodCellMovement : MonoBehaviour {
 		}
 		transform.Translate(0, translation, 0);
 
-		if ((Random.value < .5f) && (xMinus < 5))
+		if ((Random.value < .5f) && (xMinus < 4))
 		{
 			translation = Time.deltaTime * -.1f;
 			xMinus++;
