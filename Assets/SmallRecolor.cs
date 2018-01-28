@@ -21,15 +21,14 @@ public class SmallRecolor : MonoBehaviour {
 		if (gameObject.tag == "PlayerA")
 		{
 			collider.tag = "ControlledA";
-			collider.GetComponent<Renderer>().material.color = Color.red;
-			collider.GetComponent<Renderer>().materials[0].color = Color.red;
-			collider.GetComponent<Renderer>().materials[1].color = Color.red;
-			GameObject.Find("Text").GetComponent<Text>().text = collider.name;
+			foreach (Material m in collider.GetComponent<Renderer>().materials)
+			{
+				m.color = Color.red;
+			}
 		}
 		else if (gameObject.tag == "PlayerB" && (collider.tag == "ControlledA" || collider.tag == "Neutral"))
 		{
 			collider.tag = "ControlledB";
-			collider.GetComponent<Renderer>().material.color = Color.blue;
 			foreach (Material m in collider.GetComponent<Renderer>().materials)
 			{
 				m.color = Color.blue;
