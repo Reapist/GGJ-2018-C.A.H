@@ -14,6 +14,7 @@ public class MouseControle : MonoBehaviour
     float width;
     float heigth;
     //Animator anim;
+    int update;
     
 
     // Use this for initialization
@@ -27,22 +28,29 @@ public class MouseControle : MonoBehaviour
         maxSpeed = new Vector3(700, 700, 700);
         rb.freezeRotation = true;
         //Instantiate(arrow, new Vector3(1.0f, 2.0f, 0.0f), Quaternion.identity);
-
+        update = 0;
      }
     // Update is called once per frame
     void Update()
     {
         //anim.speed = 10;
 
-        if (Input.GetMouseButtonDown(0))
+        if(update > 0)
+        {
+            update--;
+        }
+
+        if (update == 0 & Input.GetMouseButtonDown(0))
         {
             //velocity = 0
             startPos = Input.mousePosition;
 
         }
 
-        else if (Input.GetMouseButtonUp(0))
+        else if (update == 0 && Input.GetMouseButtonUp(0))
         {
+            update = 30;
+
             endPos = Input.mousePosition;
             int speedFactor = 3;
             force.x = speedFactor * (endPos.x - startPos.x);

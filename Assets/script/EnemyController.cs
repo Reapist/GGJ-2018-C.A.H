@@ -39,7 +39,7 @@ public class EnemyController : MonoBehaviour {
 
             this.rb.AddForce(-force);
 
-            cooldown = 180;
+            cooldown = 30;
         }
 
         if (width < this.rb.position.x)
