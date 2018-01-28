@@ -15,6 +15,8 @@ public class TimerTime : MonoBehaviour
     private float uncontrolledObject;
     //　最初の時間
     private float startTime;
+    private bool hasChanged = false;
+
     void Start()
     {
         timerText = GameObject.Find("TimerText");
@@ -26,7 +28,7 @@ public class TimerTime : MonoBehaviour
         uncontrolledObject = 0.0f;
         maxObject = 0.0f;
         oldSeconds = 60;
-        startTime = 3;
+        startTime = 10;
     }
     void Update()
     {
@@ -51,13 +53,14 @@ public class TimerTime : MonoBehaviour
         uncontrolledObject = GameObject.FindGameObjectsWithTag("Neutral").Length;
         maxObject = controlledAObject + controlledBObject + uncontrolledObject;
 
-        if (seconds < 0)
+        if (!hasChanged && seconds < 0)
         {
             float objectA = (controlledAObject / maxObject) * 100;
             float objectB = (controlledBObject / maxObject) * 100;
             playerA.GetComponent<Text>().text= objectA.ToString("00") + "%";
             playerB.GetComponent<Text>().text = objectB.ToString("00") + "%";
 
+            hasChanged = true;
         }
 
 
