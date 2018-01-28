@@ -15,7 +15,7 @@ public class LogoDirector : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         countdown++;
-        if (countdown >= 600)
+        if (countdown >= 100)
         {
             SceneManager.LoadScene("TitleScene");
 
