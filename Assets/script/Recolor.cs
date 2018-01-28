@@ -28,18 +28,4 @@ public class Recolor : MonoBehaviour {
 			gameObject.GetComponent<Renderer>().material.color = Color.blue;
 		}
 	}
-
-	void OnTriggerEnter(Collision collision)
-	{
-		if (collision.gameObject.tag == "PlayerA")
-		{
-			gameObject.tag = "ControlledA";
-			gameObject.GetComponent<Renderer>().material.color = Color.red;
-		}
-		else if (collision.gameObject.tag == "PlayerB")
-		{
-			gameObject.tag = "ControlledB";
-			gameObject.GetComponent<Renderer>().material.color = Color.blue;
-		}
-	}
 }
