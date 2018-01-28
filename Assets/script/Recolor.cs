@@ -21,11 +21,18 @@ public class Recolor : MonoBehaviour {
 		{
 			gameObject.tag = "ControlledA";
 			gameObject.GetComponent<Renderer>().material.color = Color.red;
-		}
+            foreach (Material m in gameObject.GetComponent<Renderer>().materials)
+            {
+                m.color = Color.red;
+            }
+        }
 		else if (collision.gameObject.tag == "PlayerB") 
 		{
 			gameObject.tag = "ControlledB";
-			gameObject.GetComponent<Renderer>().material.color = Color.blue;
-		}
+            foreach (Material m in gameObject.GetComponent<Renderer>().materials)
+            {
+                m.color = Color.blue;
+            }
+        }
 	}
 }
