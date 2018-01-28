@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 0c1734d40528c0c419dd39f8cbeb6450
-timeCreated: 1517036469
+timeCreated: 1517065913
 licenseType: Pro
 ModelImporter:
   serializedVersion: 21
@@ -107,9 +107,9 @@ ModelImporter:
     - serializedVersion: 16
       name: Armature|ArmatureAction
       takeName: Armature|ArmatureAction
-      firstFrame: 0
-      lastFrame: 60
-      wrapMode: 0
+      firstFrame: 1
+      lastFrame: 59
+      wrapMode: 2
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
