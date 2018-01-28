@@ -12,7 +12,6 @@ public class EnemyController : MonoBehaviour {
     Vector3 keepPos;
     float width;
     float heigth;
-    bool mouseState;
     int cooldown;
 
     // Use this for initialization
@@ -25,12 +24,13 @@ public class EnemyController : MonoBehaviour {
 
         this.rb.freezeRotation = true;
     }
-
+    
     // Update is called once per frame
     void Update () {
         cooldown--;
         if (cooldown <= 0)
         {
+            //Random.
             startPos = new Vector2(Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f));
             endPos = new Vector2(Random.Range(-100.0f, 100.0f), Random.Range(-100.0f, 100.0f));
             int forceFactor = 5;
@@ -87,7 +87,6 @@ public class EnemyController : MonoBehaviour {
         }
 
         //this.pos.GetComponent<Text>().text = force.ToString("F2");
-        ;
 
     }
 

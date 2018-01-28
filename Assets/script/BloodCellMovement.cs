@@ -28,7 +28,7 @@ public class BloodCellMovement : MonoBehaviour {
 			if (yMinus > 0)
 				yMinus--;
 		}
-		transform.Translate(0, translation, 4);
+		transform.Translate(0, translation, 0);
 
 		if ((Random.value < .5f) && (xMinus < 5))
 		{

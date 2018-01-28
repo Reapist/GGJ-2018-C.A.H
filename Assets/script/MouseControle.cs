@@ -13,12 +13,13 @@ public class MouseControle : MonoBehaviour
     Vector3 maxSpeed;
     float width;
     float heigth;
-    Animator anim;
+    //Animator anim;
+    
 
     // Use this for initialization
     void Start()
     {
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
          force = new Vector3(0, 0, 0);
         rb = GetComponent<Rigidbody>();
         width = 4.5f;
@@ -31,7 +32,7 @@ public class MouseControle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        anim.speed = 10;
+        //anim.speed = 10;
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -55,7 +56,11 @@ public class MouseControle : MonoBehaviour
             if (force.z < -maxSpeed.z)
                 force.z = -maxSpeed.z;
 
+            rb.velocity = new Vector3(0, 0, 0);
+
             this.rb.AddForce(-force);
+
+            GetComponent<AudioSource>().Play();
         }
 
         if (width < this.rb.position.x)
