@@ -15,7 +15,7 @@ public class arrow : MonoBehaviour
     {
         sphere = GameObject.Find("PlayerCell");
         // スケールを0にすることで画面から消す
-        transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+       // transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         transform.localPosition = new Vector3(-50, 50, 50);
     }
 
@@ -45,13 +45,14 @@ public class arrow : MonoBehaviour
             float sphereDis = sphere.transform.localScale.x;
 
             this.transform.localPosition =
-                spPos - (sphereDis + arrDis) * 0.5f * force;
+                spPos - (sphereDis + arrDis) * 2 * force;
 
 
 
              float angle = Mathf.Atan2(force.x, force.z) * Mathf.Rad2Deg;
             // transform.eulerAngles = new Vector3(angle, angle, angle);
-            transform.rotation = Quaternion.Euler(0.0f, 90+angle, 90);
+            //transform.rotation = Quaternion.Euler(0.0f, 90+angle, 90);
+            transform.rotation = Quaternion.Euler(0.0f, angle, 0);
 
             //transform.localPosition.normalized
 
