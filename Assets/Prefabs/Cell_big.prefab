@@ -21,8 +21,9 @@ GameObject:
   - component: {fileID: 4416489723876728}
   - component: {fileID: 33800131106827790}
   - component: {fileID: 23325760095766304}
-  - component: {fileID: 136939787480316804}
   - component: {fileID: 114627153750946264}
+  - component: {fileID: 114041838965934426}
+  - component: {fileID: 135401005615797686}
   m_Layer: 0
   m_Name: Cell_big
   m_TagString: Neutral
@@ -52,6 +53,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -68,6 +70,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -83,6 +86,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1670268445242200}
   m_Mesh: {fileID: 4300000, guid: 87bc3052bf4b27048b0ff70fafd9be7d, type: 3}
+--- !u!114 &114041838965934426
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1670268445242200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64c770c0e51bb5e499be1d8b61d877fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114627153750946264
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -96,16 +110,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Renderer: {fileID: 0}
   GO: {fileID: 0}
---- !u!136 &136939787480316804
-CapsuleCollider:
+--- !u!135 &135401005615797686
+SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1670268445242200}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
-  m_Radius: 0.012
-  m_Height: 0.05
-  m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.012499999
+  m_Center: {x: 0, y: -0.00008353822, z: 0.0013832805}
